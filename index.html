@@ -1,23 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Teste Extensão</title>
-
-  <style>
-    img[src*="XZfQhFwZm1qP"] {
-      width: 16px !important;
-      height: 16px !important;
-      object-fit: contain; 
-      display: inline-block;
-    }
-    .wl-extension-icon, .wl-navbar img {
-      width: 16px !important;
-      height: 16px !important;
-      object-fit: contain;
-    }
-  </style>
 </head>
 <body>
 
@@ -25,22 +11,21 @@
 
   <script>
     window.WlExtension.initialize({
-      navbar: [
+    navbar: [
         {
-          id: 'ext_1',
-          type: 'item',
-          icon_url: 'https://img.icons8.com/?size=16&id=XZfQhFwZm1qP&format=png&color=FFFFFF',
-          text: 'Power BI',
-          parentId: 'modules',
-          callback: () => {
+        id: 'ext_1',
+        type: 'item',
+        icon_url: 'https://img.icons8.com/?size=16&id=XZfQhFwZm1qP&format=png&color=FFFFFF',
+        text: 'Power BI',
+        parentId: 'modules',
+        callback: () => {
             window.WlExtension.openPage({
-              url: "https://avsystemgeo.com.br/"
+            url: "https://avsystemgeo.com.br/"
             });
-          }
         }
-      ]
+        }
+    ]
     });
-
   </script>
 
 </body>
