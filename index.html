@@ -3,29 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Teste Extensão</title>
+  <title>Teste PABX</title>
 </head>
 <body>
 
   <script src="https://fileschat.sfo2.cdn.digitaloceanspaces.com/public/libs/wlclient.js"></script>
 
   <script>
+
     window.WlExtension.initialize({
-    navbar: [
-        {
-        id: 'ext_1',
-        type: 'item',
-        icon_url: 'https://img.icons8.com/?size=16&id=XZfQhFwZm1qP&format=png&color=FFFFFF',
-        text: 'Power BI',
-        parentId: 'modules',
-        callback: () => {
-            window.WlExtension.openPage({
-            url: "https://avsystemgeo.com.br/"
-            });
-        }
-        }
-    ]
+      buttons: {
+        'contacts-list': [
+            {
+              icon_url: 'https://img.icons8.com/?size=25&id=jShwZ2RCyPSO&format=png&color=192D3E',
+              text: 'PABX',
+              callback: () => {
+                window.WlExtension.alert({
+                  message: 'Teste Duda',
+                  variant: 'success'
+                });
+              },
+            }
+          ],
+      }
     });
+
   </script>
 
 </body>
