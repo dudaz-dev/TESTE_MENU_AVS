@@ -12,6 +12,22 @@
   <script>
 
     window.WlExtension.initialize({
+
+      buttons: {
+          'contacts-list': [
+              {
+                icon_url: 'https://img.icons8.com/?size=25&id=jShwZ2RCyPSO&format=png&color=192D3E', // Opcional icone 25x25 
+                text: 'PABX',
+                callback: () => {
+                  window.WlExtension.alert({
+                    message: 'Teste Duda',
+                    variant: 'success'
+                  });
+                },
+              }
+            ],
+      },
+      
       navbar: [
         {
         id: 'ext_1',
@@ -26,10 +42,12 @@
         }
       }
     ]
+      
     });
 
   </script>
 
 </body>
 </html>
+
 
